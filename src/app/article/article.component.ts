@@ -87,4 +87,6 @@ export class ArticleComponent {
       'precio': 350
     }
   ]
+  
+  article:Article=this.articles[4];
 }

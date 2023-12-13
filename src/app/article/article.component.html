@@ -1,1 +1,10 @@
-<p>article works!</p>
+<div class="card" style="width: 18rem;">
+    <img src="../../assets/{{article.codigo}}.jpg" class="card-top-img">
+    <div class="card-body text-center">
+        <h3 class="card-title">{{article.nombre}}</h3>
+        <p class="card-text">{{article.descripcion}}</p>
+        <b><p class="card-text text-center">{{article.precio}}</p></b>
+        <button id="{{article.codigo}}" class="btn btn-primary"
+        disabled="botonActivo">Comprar</button>
+    </div>
+</div>
