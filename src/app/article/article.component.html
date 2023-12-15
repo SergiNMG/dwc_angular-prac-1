@@ -1,17 +1,13 @@
-<div *ngFor="let article of articles">
-    <div class="col">
-        <div class="card">
-            <img src="../../assets/{{ article.codigo }}.jpg" class="card-img-top" />
-            <div class="card-body">
-                <h3 class="card-title">{{ article.nombre }}</h3>
-                <p class="card-text">{{ article.descripcion }}</p>
-                <b>
-                    <p class="card-text text-center">{{ article.precio }}</p>
-                </b>
-            </div>
-            <button id="{{ article.codigo }}" class="btn btn-primary" disabled="botonActivo">
-                Comprar
-            </button>
-        </div>
+<div *ngFor="let article of articles" class="card">
+    <img src="../../assets/{{ article.codigo }}.jpg" class="card-img-top" />
+    <div class="card-body">
+        <h3 class="card-title">{{ article.nombre }}</h3>
+        <p class="card-text">{{ article.descripcion }}</p>
+        <b>
+            <p class="card-text text-center">{{ article.precio }}</p>
+        </b>
     </div>
+    <button id="{{ article.codigo }}" class="btn btn-primary" disabled="botonActivo">
+        Comprar
+    </button>
 </div>
