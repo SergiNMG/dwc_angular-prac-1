@@ -7,7 +7,7 @@ import { Article } from '../models/article';
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent {
-  articles:Article[]=[
+  articles: Article[] = [
     {
       'codigo': 'm1',
       'nombre': 'Galaxy A32',
@@ -87,6 +87,14 @@ export class ArticleComponent {
       'precio': 350
     }
   ]
-  
-  article:Article=this.articles[4];
+
+  //article: Article = this.articles[4];
+
+  botonComprar: boolean = true;
+  ngOnInit() {
+    setTimeout(() => {
+      alert("Activando botón..")
+      this.botonComprar = false
+    }, 5000)
+  }
 }
