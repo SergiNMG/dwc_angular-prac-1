@@ -2,10 +2,10 @@
 <table class="table table-striped">
     <thead>
         <tr>
-            <td scope="col">Codigo</td>
-            <td scope="col">Nombre</td>
-            <td scope="col">Descripcion</td>
-            <td scope="col">Precio</td>
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Codigo</th>
+            <th scope="col">Precio</th>
         </tr>
     </thead>
     <tbody>
@@ -16,14 +16,16 @@
             <td>{{ article.precio }}</td>
         </tr>
     </tbody>
-
-    <br>
-
-    <div *ngFor="let article of articles">
-        <select id="article.id">
-            {{article.nombre}}
-        </select>
-    </div>
-
-
 </table>
+
+<br>
+
+<div class="text-center">
+    <h3 class="text-primary">Select Artículos: </h3>
+    <select class="form-select-lg" [(ngModel)]="selectedArticle">
+        <option [value]="article.nombre" *ngFor="let article of articles">
+            {{article.nombre}}
+        </option>
+    </select>
+    <p>Artículo seleccionado: <b>{{ selectedArticle }}</b></p>
+</div>

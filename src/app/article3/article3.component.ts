@@ -10,6 +10,8 @@ import { Article } from '../models/article';
 export class Article3Component {
 
   articles: Article[] = [];
+  //selectedArticle!:Article | null
+  selectedArticle:string = this.articleService.articles[0].nombre;
 
   constructor(private articleService: ArticleService) { }
 
