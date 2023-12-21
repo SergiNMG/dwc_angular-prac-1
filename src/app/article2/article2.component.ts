@@ -9,10 +9,11 @@ import { ArticleService } from '../services/article.service';
 })
 export class Article2Component {
 
-  article!: Article;
+  //article!: Article;
+  article = this.articleService.articles[0];
 
   constructor(private articleService: ArticleService) {
-    this.introducirPosicion;
+    this.introducirPosicion();
   }
 
   introducirPosicion() {
