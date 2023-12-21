@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Article } from '../models/article';
 import { ArticleService } from '../services/article.service';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-article2',
@@ -10,7 +11,8 @@ import { ArticleService } from '../services/article.service';
 export class Article2Component {
 
   //article!: Article;
-  article = this.articleService.articles[0];
+  article: Article = this.articleService.articles[0];
+  modelo: string = "Galaxy A32";
 
   constructor(private articleService: ArticleService) {
     this.introducirPosicion();
