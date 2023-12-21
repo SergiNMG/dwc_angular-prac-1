@@ -1,0 +1,29 @@
+<h3 class="text-primary text-center">Tabla Artículos: </h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td scope="col">Codigo</td>
+            <td scope="col">Nombre</td>
+            <td scope="col">Descripcion</td>
+            <td scope="col">Precio</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let article of articles">
+            <td scope="row">{{ article.codigo }}</td>
+            <td>{{ article.nombre }}</td>
+            <td>{{ article.descripcion }}</td>
+            <td>{{ article.precio }}</td>
+        </tr>
+    </tbody>
+
+    <br>
+
+    <div *ngFor="let article of articles">
+        <select id="article.id">
+            {{article.nombre}}
+        </select>
+    </div>
+
+
+</table>
