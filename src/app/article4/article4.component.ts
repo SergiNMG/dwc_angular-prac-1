@@ -11,12 +11,13 @@ export class Article4Component {
 
   @Input() article!:Article;
   articles = this.articleService.articles;
+  articleSelected !:Article;
 
   constructor(private articleService: ArticleService) { 
-    this.showArticle();
+    this.showArticle(this.article);
   }
   
-  showArticle(){
-    
+  showArticle(article:Article){
+    this.articleSelected = article
   }
 }

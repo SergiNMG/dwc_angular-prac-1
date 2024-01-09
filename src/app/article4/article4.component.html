@@ -11,13 +11,13 @@
                 <tbody>
                     <tr *ngFor="let article of articles">
                         <td>{{article.nombre}}</td>
-                        <button></button>
+                        <td><button (click)="showArticle(article)" class="btn btn-primary"> Ver Articulo </button></td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <div class="col-8">
-
+            <app-article-g [article]="articleSelected"></app-article-g>
         </div>
     </div>
 </div>
