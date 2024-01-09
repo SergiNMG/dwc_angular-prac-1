@@ -7,13 +7,17 @@ import { ArticleComponent } from './article/article.component';
 import { Article2Component } from './article2/article2.component';
 import { FormsModule } from '@angular/forms';
 import { Article3Component } from './article3/article3.component';
+import { Article4Component } from './article4/article4.component';
+import { ArticleGComponent } from './article-g/article-g.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArticleComponent,
     Article2Component,
-    Article3Component
+    Article3Component,
+    Article4Component,
+    ArticleGComponent
   ],
   imports: [
     BrowserModule,
