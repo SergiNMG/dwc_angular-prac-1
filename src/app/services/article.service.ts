@@ -5,19 +5,6 @@ import { Article } from '../models/article';
   providedIn: 'root'
 })
 export class ArticleService {
-
-  getArticulos() {
-    return this.articles;
-  }
-
-  getArticulo(id: string) {
-    return this.articles.find(a => a.codigo == id);
-  }
-
-  deleteArticulo(id: string) {
-    return this.articles.filter(a => a.codigo != id);
-  }
-
   articles: Article[] = [
     {
       'codigo': 'm1',
@@ -98,4 +85,16 @@ export class ArticleService {
       'precio': 350
     }
   ];
+
+  getArticulos() {
+    return this.articles;
+  }
+
+  getArticulo(id:string) {
+    return this.articles.find(a => a.codigo == id);
+  }
+
+  deleteArticulo(id:string) {
+    return this.articles.filter(a => a.codigo != id);
+  }
 }
