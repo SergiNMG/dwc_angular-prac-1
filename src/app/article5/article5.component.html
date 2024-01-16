@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <table class="table table-striped">
+                <thead>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let article of articles">
+                        <td>{{article.codigo}}</td>
+                        <td>{{article.nombre}}</td>
+                        <td>{{article.descripcion}}</td>
+                        <td>{{article.precio}}</td>
+                        <td><button (click)="showArticle(article.codigo)"></button></td>
+                        <td><button (click)="deleteArticle(article.codigo)"></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div>
+
+</div>

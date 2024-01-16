@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { Article3Component } from './article3/article3.component';
 import { Article4Component } from './article4/article4.component';
 import { ArticleGComponent } from './article-g/article-g.component';
+import { Article5Component } from './article5/article5.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ArticleGComponent } from './article-g/article-g.component';
     Article2Component,
     Article3Component,
     Article4Component,
-    ArticleGComponent
+    ArticleGComponent,
+    Article5Component
   ],
   imports: [
     BrowserModule,
