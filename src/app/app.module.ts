@@ -10,6 +10,9 @@ import { Article3Component } from './article3/article3.component';
 import { Article4Component } from './article4/article4.component';
 import { ArticleGComponent } from './article-g/article-g.component';
 import { Article5Component } from './article5/article5.component';
+import { IndexComponent } from './index/index.component';
+import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { Article5Component } from './article5/article5.component';
     Article3Component,
     Article4Component,
     ArticleGComponent,
-    Article5Component
+    Article5Component,
+    IndexComponent,
+    HeaderComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
