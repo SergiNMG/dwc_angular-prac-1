@@ -1,28 +1,28 @@
-<div class="container">
-    <div class="row">
-        <div class="col-4">
-            <table class="table table-striped">
-                <thead>
-                    <th scope="col">Id</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Descripcion</th>
-                    <th scope="col">Precio</th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let article of articles">
-                        <td>{{article.codigo}}</td>
-                        <td>{{article.nombre}}</td>
-                        <td>{{article.descripcion}}</td>
-                        <td>{{article.precio}}</td>
-                        <td><button (click)="showArticle(article.codigo)"></button></td>
-                        <td><button (click)="deleteArticle(article.codigo)"></button></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+<div class="row">
+    <div class="col-4">
+        <table class="table">
+            <thead>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Precio</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let article of articles">
+                    <td>{{article.codigo}}</td>
+                    <td>{{article.nombre}}</td>
+                    <td>{{article.descripcion}}</td>
+                    <td>{{article.precio}}</td>
+                    <td><button (click)="showArticle(article.codigo)" class="btn btn-primary">
+                            Ver</button></td>
+                    <td><button (click)="deleteArticle(article.codigo)" class="btn btn-danger">
+                            Borrar</button></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 <div *ngIf="articleSelected" class="alert alert-primary" role="alert">
@@ -46,7 +46,31 @@
         </tr>
     </table>
     <div>
-        <button (click)="modifyArticle()" class=""></button>
-        <button (click)="cancel()" class=""></button>
+        <button (click)="modifyArticle()" class="btn btn-primary"></button>
+        <button (click)="cancel()" class="btn btn-success"></button>
+    </div>
+</div>
+<div class="alert alert-sucess" role="alert">
+    <h3 class="text-center">Añadir articulo</h3>
+    <table>
+        <tr>
+            <td>id: </td>
+            <td><input type="text" [(ngModel)]="codigo"></td>
+        </tr>
+        <tr>
+            <td>nombre: </td>
+            <td><input type="text" [(ngModel)]="nombre"></td>
+        </tr>
+        <tr>
+            <td>descripción: </td>
+            <td><input type="text" [(ngModel)]="descripcion"></td>
+        </tr>
+        <tr>
+            <td>precio: </td>
+            <td><input type="text" [(ngModel)]="precio"></td>
+        </tr>
+    </table>
+    <div>
+        <button (click)="addArticle()" class="btn btn-primary">Añadir</button>
     </div>
 </div>

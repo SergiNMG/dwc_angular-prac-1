@@ -90,11 +90,22 @@ export class ArticleService {
     return this.articles;
   }
 
-  getArticulo(id:string) {
-    return this.articles.find(a => a.codigo == id);
+  getArticulo(id: string) {
+    //return this.articles.find(a => a.codigo == id) || undefined;
+    let position = this.articles.findIndex(a => a.codigo == id);
+    return this.articles[position];
   }
 
-  deleteArticulo(id:string) {
-    return this.articles.filter(a => a.codigo != id);
+  putArticulo(articleModified: Article) {
+    let position = this.articles.findIndex(a => a.codigo == articleModified.codigo);
+    this.articles[position] = articleModified;
+  }
+
+  addArticulo(articleNew: Article) {
+    this.articles.push(articleNew);
+  }
+
+  deleteArticulo(id: string) {
+    //return this.articles.splice(a);
   }
 }
