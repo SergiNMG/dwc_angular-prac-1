@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ArticleService } from '../services/article.service';
 import { Article } from '../models/article';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,14 +13,14 @@ export class Article5Component {
 
   articles!: Article[];
 
-  constructor(private articleService: ArticleService) { }
+  constructor(private articleService: ArticleService,
+    private router: Router) { }
 
   ngOnInit() {
     this.articles = this.articleService.getArticulos()
   }
 
   articleSelected!: Article | null;
-  articleNew!: Article;
 
   codigo!: string
   nombre!: string
@@ -53,22 +54,16 @@ export class Article5Component {
     this.cancel()
   }
 
-  addArticle() {
-    let articleNew: Article = {
-      codigo: this.codigo,
-      nombre: this.nombre,
-      descripcion: this.descripcion,
-      precio: this.precio
-    }
-    this.articleService.addArticulo(articleNew);
-  }
-
   deleteArticle(id: string) {
     this.articleService.deleteArticulo(id);
   }
 
   cancel() {
     this.articleSelected = null;
+  }
+
+  navigateTo(route: string) {
+    this.router.navigate([route])
   }
 
 }

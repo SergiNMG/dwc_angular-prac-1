@@ -13,6 +13,7 @@ import { Article5Component } from './article5/article5.component';
 import { IndexComponent } from './index/index.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
+import { AddArticleComponent } from './add-article/add-article.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HomeComponent } from './home/home.component';
     Article5Component,
     IndexComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    AddArticleComponent
   ],
   imports: [
     BrowserModule,

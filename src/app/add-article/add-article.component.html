@@ -1,0 +1,27 @@
+<div class="alert alert-sucess" role="alert">
+    <h3 class="text-center">Añadir articulo</h3>
+    <div>
+        <table>
+            <tr>
+                <td>id: </td>
+                <td><input type="text" [(ngModel)]="codigo"></td>
+            </tr>
+            <tr>
+                <td>nombre: </td>
+                <td><input type="text" [(ngModel)]="nombre"></td>
+            </tr>
+            <tr>
+                <td>descripción: </td>
+                <td><input type="text" [(ngModel)]="descripcion"></td>
+            </tr>
+            <tr>
+                <td>precio: </td>
+                <td><input type="text" [(ngModel)]="precio"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="text-center">
+        <button (click)="addArticle()" class="btn btn-primary">Añadir</button>
+        <button (click)="navigateTo('article5')" class="btn btn-secondary">Volver</button>
+    </div>
+</div>
