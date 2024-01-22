@@ -98,14 +98,16 @@ export class ArticleService {
 
   putArticulo(articleModified: Article) {
     let position = this.articles.findIndex(a => a.codigo == articleModified.codigo);
-    this.articles[position] = articleModified;
+    return this.articles[position] = articleModified;
   }
 
   addArticulo(articleNew: Article) {
     this.articles.push(articleNew);
+    alert("Articulo añadido")
   }
 
   deleteArticulo(id: string) {
-    //return this.articles.splice(a);
+    let position = this.articles.findIndex(a => a.codigo == id);
+    return this.articles.splice(position, 1);
   }
 }

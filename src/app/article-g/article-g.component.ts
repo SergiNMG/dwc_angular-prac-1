@@ -8,6 +8,6 @@ import { Article } from '../models/article';
 })
 export class ArticleGComponent {
 
-  @Input() article!:Article
+  @Input() article!: Article;
 
 }

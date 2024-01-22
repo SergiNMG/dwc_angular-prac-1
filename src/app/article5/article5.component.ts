@@ -17,7 +17,7 @@ export class Article5Component {
     private router: Router) { }
 
   ngOnInit() {
-    this.articles = this.articleService.getArticulos()
+    this.articles = this.articleService.getArticulos();
   }
 
   articleSelected!: Article | null;
@@ -44,14 +44,15 @@ export class Article5Component {
   modifyArticle() {
     if (this.articleSelected != null) {
       let articleModified: Article = {
-        codigo: this.codigo,
+        codigo: this.articleSelected.codigo,
         nombre: this.nombre,
         descripcion: this.descripcion,
         precio: this.precio
       }
+      console.log(articleModified);
       this.articleService.putArticulo(articleModified);
     }
-    this.cancel()
+    this.articleSelected = null;
   }
 
   deleteArticle(id: string) {

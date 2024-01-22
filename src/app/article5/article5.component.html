@@ -30,12 +30,12 @@
         </table>
     </div>
 </div>
-<div *ngIf="articleSelected" class="alert alert-primary" role="alert">
+<div class="alert alert-primary" role="alert" *ngIf="articleSelected">
     <h3 class="text-center">Articulo Seleccionado</h3>
     <table>
         <tr>
             <td>id: </td>
-            <td><input type="text" [(ngModel)]="codigo" readonly></td>
+            <td><input type="text" [(ngModel)]="articleSelected.codigo" readonly> {{codigo}} </td>
         </tr>
         <tr>
             <td>nombre: </td>
@@ -51,7 +51,7 @@
         </tr>
     </table>
     <div>
-        <button (click)="modifyArticle()" class="btn btn-primary"></button>
-        <button (click)="cancel()" class="btn btn-success"></button>
+        <button (click)="modifyArticle()" class="btn btn-primary">Modificar</button>
+        <button (click)="cancel()" class="btn btn-success">Cancelar</button>
     </div>
 </div>
