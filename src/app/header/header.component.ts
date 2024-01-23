@@ -7,6 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+
+  selectValue: string = "Index";
+
   constructor(private router: Router) { }
 
   navigateTo(route: string) {

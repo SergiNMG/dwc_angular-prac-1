@@ -11,7 +11,7 @@ export class Article3Component {
 
   articles: Article[] = [];
   //selectedArticle!:Article | null
-  selectedArticle:string = this.articleService.articles[0].nombre;
+  selectedArticle: string = this.articleService.articles[2].nombre;
 
   constructor(private articleService: ArticleService) { }
 

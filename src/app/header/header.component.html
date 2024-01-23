@@ -1,10 +1,6 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ffe2f4;">
         <a class="navbar-brand">APP Articles</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active">
@@ -15,5 +11,12 @@
                 </li>
             </ul>
         </div>
+        <select class="form-select-lg" [(ngModel)]="selectValue" (change)="navigateTo(selectValue)">
+            <option value="/article">Article 1</option>
+            <option value="/article2">Article 2</option>
+            <option value="/article3">Article 3</option>
+            <option value="/article4">Article 4</option>
+            <option value="/article5">Article 5</option>
+        </select>
     </nav>
 </header>
