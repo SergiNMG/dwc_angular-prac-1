@@ -27,34 +27,6 @@ export class Article5Component {
   descripcion!: string
   precio!: number
 
-  showArticle(id: string) {
-    this.articleSelected = this.articleService.getArticulo(id);
-
-    /*this.codigo = this.articleSelected.codigo;
-    this.nombre = this.articleSelected?.nombre;
-    this.descripcion = this.articleSelected?.descripcion;
-    this.precio = this.articleSelected?.precio;*/
-
-    this.codigo == this.articleSelected.codigo;
-    this.nombre == this.articleSelected.nombre;
-    this.descripcion == this.articleSelected.descripcion;
-    this.precio == this.articleSelected.precio;
-  }
-
-  modifyArticle() {
-    if (this.articleSelected != null) {
-      let articleModified: Article = {
-        codigo: this.articleSelected.codigo,
-        nombre: this.nombre,
-        descripcion: this.descripcion,
-        precio: this.precio
-      }
-      console.log(articleModified);
-      this.articleService.putArticulo(articleModified);
-      this.navigateTo("/article5")
-    }
-    this.articleSelected = null;
-  }
 
   deleteArticle(id: string) {
     this.articleService.deleteArticulo(id);
@@ -67,5 +39,29 @@ export class Article5Component {
   navigateTo(route: string) {
     this.router.navigate([route])
   }
+
+  // showArticle(id: string) {
+  //   this.articleSelected = this.articleService.getArticulo(id);
+
+  //   this.codigo == this.articleSelected.codigo;
+  //   this.nombre == this.articleSelected.nombre;
+  //   this.descripcion == this.articleSelected.descripcion;
+  //   this.precio == this.articleSelected.precio;
+  // }
+
+  // modifyArticle() {
+  //   if (this.articleSelected != null) {
+  //     let articleModified: Article = {
+  //       codigo: this.articleSelected.codigo,
+  //       nombre: this.nombre,
+  //       descripcion: this.descripcion,
+  //       precio: this.precio
+  //     }
+  //     console.log(articleModified);
+  //     this.articleService.putArticulo(articleModified);
+  //     this.navigateTo("/article5")
+  //   }
+  //   this.articleSelected = null;
+  // }
 
 }

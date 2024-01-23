@@ -1,7 +1,7 @@
-<div class="alert alert-sucess" role="alert">
+<div class="alert alert-secondary mt-5 text-center" role="alert">
     <h3 class="text-center">Añadir articulo</h3>
-    <div>
-        <table>
+    <div class="d-inline-block">
+        <table class="mx-auto">
             <tr>
                 <td>id: </td>
                 <td><input type="text" [(ngModel)]="codigo"></td>
@@ -21,7 +21,7 @@
         </table>
     </div>
     <div class="text-center">
-        <button (click)="addArticle()" class="btn btn-primary">Añadir</button>
-        <button (click)="navigateTo('article5')" class="btn btn-secondary">Volver</button>
+        <button (click)="addArticle()" class="btn btn-primary m-1">Añadir</button>
+        <button (click)="navigateTo('article5')" class="btn btn-secondary m-1">Volver</button>
     </div>
 </div>

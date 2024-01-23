@@ -2,28 +2,31 @@
 
 <div class="text-center">
     <app-article-g [article]="article"></app-article-g>
-    <button class="btn btn-primary m-1">Modificar</button>
-    <button class="btn btn-danger m-1">Borrar</button>
+    <button class="btn btn-primary m-1" (click)="modifyArticle()">Modificar</button>
+    <button class="btn btn-danger m-1" (click)="deleteArticle(article.codigo)">Borrar</button>
+    <button class="btn btn-secondary m-1" (click)="cancel()">Cancelar</button>
 </div>
 
-<div class="alert alert-primary" role="alert">
+<div class="alert alert-primary mt-5 text-center" role="alert">
     <h3 class="text-center">Articulo Seleccionado</h3>
-    <table>
-        <tr>
-            <td>id: </td>
-            <td><input type="text" [(ngModel)]="article.codigo" readonly></td>
-        </tr>
-        <tr>
-            <td>nombre: </td>
-            <td><input type="text" [(ngModel)]="article.nombre"></td>
-        </tr>
-        <tr>
-            <td>descripción: </td>
-            <td><input type="text" [(ngModel)]="article.descripcion"></td>
-        </tr>
-        <tr>
-            <td>precio: </td>
-            <td><input type="text" [(ngModel)]="article.precio"></td>
-        </tr>
-    </table>
+    <div class="d-inline-block">
+        <table class="mx-auto">
+            <tr>
+                <td>id: </td>
+                <td><input type="text" [(ngModel)]="article.codigo" readonly></td>
+            </tr>
+            <tr>
+                <td>nombre: </td>
+                <td><input type="text" [(ngModel)]="nombre"></td>
+            </tr>
+            <tr>
+                <td>descripción: </td>
+                <td><input type="text" [(ngModel)]="descripcion"></td>
+            </tr>
+            <tr>
+                <td>precio: </td>
+                <td><input type="text" [(ngModel)]="precio"></td>
+            </tr>
+        </table>
+    </div>
 </div>

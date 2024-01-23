@@ -26,28 +26,3 @@
         </tr>
     </tbody>
 </table>
-<div class="alert alert-primary" role="alert" *ngIf="articleSelected">
-    <h3 class="text-center">Articulo Seleccionado</h3>
-    <table>
-        <tr>
-            <td>id: </td>
-            <td><input type="text" [(ngModel)]="articleSelected.codigo" readonly> {{codigo}} </td>
-        </tr>
-        <tr>
-            <td>nombre: </td>
-            <td><input type="text" [(ngModel)]="nombre"></td>
-        </tr>
-        <tr>
-            <td>descripción: </td>
-            <td><input type="text" [(ngModel)]="descripcion"></td>
-        </tr>
-        <tr>
-            <td>precio: </td>
-            <td><input type="text" [(ngModel)]="precio"></td>
-        </tr>
-    </table>
-    <div>
-        <button (click)="modifyArticle()" class="btn btn-primary">Modificar</button>
-        <button (click)="cancel()" class="btn btn-success">Cancelar</button>
-    </div>
-</div>
