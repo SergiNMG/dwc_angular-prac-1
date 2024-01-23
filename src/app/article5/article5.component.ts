@@ -51,6 +51,7 @@ export class Article5Component {
       }
       console.log(articleModified);
       this.articleService.putArticulo(articleModified);
+      this.navigateTo("/article5")
     }
     this.articleSelected = null;
   }

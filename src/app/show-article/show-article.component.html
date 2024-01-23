@@ -1,0 +1,29 @@
+<h2>Información artículo</h2>
+
+<div class="text-center">
+    <app-article-g [article]="article"></app-article-g>
+    <button class="btn btn-primary m-1">Modificar</button>
+    <button class="btn btn-danger m-1">Borrar</button>
+</div>
+
+<div class="alert alert-primary" role="alert">
+    <h3 class="text-center">Articulo Seleccionado</h3>
+    <table>
+        <tr>
+            <td>id: </td>
+            <td><input type="text" [(ngModel)]="article.codigo" readonly></td>
+        </tr>
+        <tr>
+            <td>nombre: </td>
+            <td><input type="text" [(ngModel)]="article.nombre"></td>
+        </tr>
+        <tr>
+            <td>descripción: </td>
+            <td><input type="text" [(ngModel)]="article.descripcion"></td>
+        </tr>
+        <tr>
+            <td>precio: </td>
+            <td><input type="text" [(ngModel)]="article.precio"></td>
+        </tr>
+    </table>
+</div>

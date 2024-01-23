@@ -14,6 +14,7 @@ import { IndexComponent } from './index/index.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { AddArticleComponent } from './add-article/add-article.component';
+import { ShowArticleComponent } from './show-article/show-article.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AddArticleComponent } from './add-article/add-article.component';
     IndexComponent,
     HeaderComponent,
     HomeComponent,
-    AddArticleComponent
+    AddArticleComponent,
+    ShowArticleComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,7 @@
 <div class="card" *ngIf="article">
-    <img src="../../assets/{{article.codigo}}.jpg" />
+    <div class="text-center">
+        <img src="../../assets/{{article.codigo}}.jpg" class="w-25" />
+    </div>
     <div class="card-body">
         <h5 class="card-title">{{article.nombre}}</h5>
         <p class="card-text">{{article.descripcion}}</p>
