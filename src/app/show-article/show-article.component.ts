@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ArticleService } from '../services/article.service';
 import { Article } from '../models/article';
@@ -12,6 +12,7 @@ import { ArticleGComponent } from '../article-g/article-g.component';
 export class ShowArticleComponent {
 
   article!: Article;
+  articleModified!: Article | null;
 
   codigo!: string;
   nombre!: string;
@@ -23,19 +24,25 @@ export class ShowArticleComponent {
     private articleService: ArticleService) { }
 
   ngOnInit() {
-    this.codigo = this.activeRoute.snapshot.params['codigo']
+    this.codigo = this.activeRoute.snapshot.params['codigo'];
     this.article = this.articleService.getArticulo(this.codigo);
+    this.articleModified = this.article;
+
+    this.codigo = this.article.codigo
+    this.nombre = this.article.nombre
+    this.descripcion = this.article.descripcion
+    this.precio = this.article.precio
   }
 
   modifyArticle() {
-    if (this.article != null) {
-      let articleModified: Article = {
+    if (this.articleModified != null) {
+      this.articleModified = {
         codigo: this.codigo,
         nombre: this.nombre,
         descripcion: this.descripcion,
         precio: this.precio
       }
-      this.articleService.putArticulo(articleModified);
+      this.articleService.putArticulo(this.articleModified);
     }
     this.navigateTo("/article5")
   }
@@ -46,6 +53,7 @@ export class ShowArticleComponent {
   }
 
   cancel() {
+    this.articleModified = null;
     this.navigateTo("/article5")
   }
 

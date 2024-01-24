@@ -15,6 +15,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { AddArticleComponent } from './add-article/add-article.component';
 import { ShowArticleComponent } from './show-article/show-article.component';
+import { FilterComponent } from './filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ShowArticleComponent } from './show-article/show-article.component';
     HeaderComponent,
     HomeComponent,
     AddArticleComponent,
-    ShowArticleComponent
+    ShowArticleComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,

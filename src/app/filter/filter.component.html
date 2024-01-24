@@ -1,0 +1,18 @@
+<div class="alert alert-primary mt-5 text-center" role="alert">
+    <h3 class="text-center">Articulo Seleccionado</h3>
+    <div class="d-inline-block">
+        <table class="mx-auto">
+            <tr>
+                <td>Precio: </td>
+                <td><input type="text" [(ngModel)]="precio"></td>
+            </tr>
+            <tr>
+                <td>Orden: </td>
+                <td><input type="text" [(ngModel)]="orden"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="text-center">
+    <button class="btn btn-primary m-1" (click)="filter()">Filtrar</button>
+</div>

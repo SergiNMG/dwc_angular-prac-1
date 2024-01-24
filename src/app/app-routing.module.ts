@@ -9,6 +9,8 @@ import { IndexComponent } from './index/index.component';
 import { HomeComponent } from './home/home.component';
 import { AddArticleComponent } from './add-article/add-article.component';
 import { ShowArticleComponent } from './show-article/show-article.component';
+import { filter } from 'rxjs';
+import { FilterComponent } from './filter/filter.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -19,7 +21,8 @@ const routes: Routes = [
   { path: 'article4', component: Article4Component },
   { path: 'article5', component: Article5Component },
   { path: 'addarticle', component: AddArticleComponent },
-  { path: 'showarticle/:codigo', component: ShowArticleComponent }
+  { path: 'showarticle/:codigo', component: ShowArticleComponent },
+  { path: 'filter', component: FilterComponent }
 ];
 
 @NgModule({
