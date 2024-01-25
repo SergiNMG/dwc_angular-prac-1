@@ -16,6 +16,7 @@ import { HomeComponent } from './home/home.component';
 import { AddArticleComponent } from './add-article/add-article.component';
 import { ShowArticleComponent } from './show-article/show-article.component';
 import { FilterComponent } from './filter/filter.component';
+import { FiltredArticleComponent } from './filtred-article/filtred-article.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FilterComponent } from './filter/filter.component';
     HomeComponent,
     AddArticleComponent,
     ShowArticleComponent,
-    FilterComponent
+    FilterComponent,
+    FiltredArticleComponent
   ],
   imports: [
     BrowserModule,

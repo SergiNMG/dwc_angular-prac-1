@@ -20,8 +20,8 @@ export class FilterComponent {
   }
 
   filter() {
-    this.router.navigate(['/article'],
-      { queryParams: { precio: 700, orden: 'ascendente' } }
+    this.router.navigate(['/filtredArticles'],
+      { queryParams: { precio: this.precio, orden: this.orden } }
     )
   }
 }

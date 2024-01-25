@@ -110,4 +110,9 @@ export class ArticleService {
     let position = this.articles.findIndex(a => a.codigo == id);
     return this.articles.splice(position, 1);
   }
+
+  fiterArticles(precio: number, orden: string) {
+    let filtredArticles = this.articles.filter(a => a.precio >= precio).sort((a, b) => a.precio - b.precio);
+    return (orden == "asc") ? filtredArticles : filtredArticles.reverse();
+  }
 }

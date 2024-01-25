@@ -11,9 +11,11 @@ import { AddArticleComponent } from './add-article/add-article.component';
 import { ShowArticleComponent } from './show-article/show-article.component';
 import { filter } from 'rxjs';
 import { FilterComponent } from './filter/filter.component';
+import { FiltredArticleComponent } from './filtred-article/filtred-article.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'filtredArticles', component: FiltredArticleComponent },
   { path: 'index', component: IndexComponent },
   { path: 'article', component: ArticleComponent },
   { path: 'article2', component: Article2Component },
