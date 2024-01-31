@@ -18,6 +18,10 @@ import { ShowArticleComponent } from './show-article/show-article.component';
 import { FilterComponent } from './filter/filter.component';
 import { FiltredArticleComponent } from './filtred-article/filtred-article.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { ClientsComponent } from './clients/clients.component';
+import { ShowClientComponent } from './show-client/show-client.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,12 +37,15 @@ import { FiltredArticleComponent } from './filtred-article/filtred-article.compo
     AddArticleComponent,
     ShowArticleComponent,
     FilterComponent,
-    FiltredArticleComponent
+    FiltredArticleComponent,
+    ClientsComponent,
+    ShowClientComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
