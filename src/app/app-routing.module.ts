@@ -29,7 +29,7 @@ const routes: Routes = [
   { path: 'showarticle/:codigo', component: ShowArticleComponent },
   { path: 'filter', component: FilterComponent },
   { path: 'clients', component: ClientsComponent },
-  { path: 'client/:codigo', component: ShowClientComponent }
+  { path: 'clients/:id', component: ShowClientComponent }
 ];
 
 @NgModule({

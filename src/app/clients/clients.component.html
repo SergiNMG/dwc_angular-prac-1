@@ -15,7 +15,7 @@
             <th scope="row">{{client.id}}</th>
             <td>{{client.nombre}}</td>
             <td>{{client.cargo}}</td>
-            <td><button class="btn btn-primary" (click)="navigateTo('client/{{client.id}}')">Ver</button></td>
+            <td><button class="btn btn-primary" (click)="navigateTo('clients/' + client.id)">Ver</button></td>
         </tr>
     </tbody>
 </table>

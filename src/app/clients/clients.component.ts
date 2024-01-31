@@ -25,7 +25,6 @@ export class ClientsComponent {
   showClient(id: number) {
     this.clientsService.getCliente(id).subscribe(dato => {
       this.client = dato;
-      console.log(id);
       console.log(dato);
     });
   }

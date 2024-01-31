@@ -21,8 +21,8 @@ export class ShowClientComponent {
 
   ngOnInit() {
     this.id = this.activeRoute.snapshot.params['id'];
-    this.clientsService.getCliente(this.id).subscribe(dato => {
-      this.client = dato;
+    this.clientsService.getCliente(this.id).subscribe(data => {
+      this.client = data;
 
       this.nombre = this.client.nombre;
       this.cargo = this.client.cargo;
