@@ -1,8 +1,4 @@
-<h3>Info del cliente</h3>
-
-<br>
-
-<table class="table">
+<!-- <table class="table">
     <thead>
         <tr>
             <th scope="col">Id</th>
@@ -17,4 +13,26 @@
             <td>{{cargo}}</td>
         </tr>
     </tbody>
-</table>
+</table> -->
+
+<div class="alert alert-primary mt-5 text-center" role="alert">
+    <h3 class="text-center">Articulo Seleccionado</h3>
+    <div class="d-inline-block">
+        <table class="mx-auto">
+            <tr>
+                <td>id: </td>
+                <td><input type="text" [(ngModel)]="id" readonly></td>
+            </tr>
+            <tr>
+                <td>nombre: </td>
+                <td><input type="text" [(ngModel)]="nombre"></td>
+            </tr>
+            <tr>
+                <td>descripción: </td>
+                <td><input type="text" [(ngModel)]="cargo"></td>
+            </tr>
+        </table>
+        <br>
+        <button class="btn btn-primary" (click)="putCliente()">Modificar</button> &nbsp;
+        <button class="btn btn-danger" (click)="cancel()">Cancelar</button>
+    </div>

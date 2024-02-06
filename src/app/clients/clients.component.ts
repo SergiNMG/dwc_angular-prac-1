@@ -29,6 +29,7 @@ export class ClientsComponent {
     });
   }
 
+
   navigateTo(route: string) {
     this.router.navigate([route]);
   }
