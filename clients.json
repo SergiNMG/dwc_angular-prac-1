@@ -1,49 +1,39 @@
 {
   "clients": [
     {
-      "id": "1",
+      "id": 1,
       "nombre": "Ana",
       "cargo": "Programadora"
     },
     {
-      "id": "2",
+      "id": 2,
       "nombre": "Elena Martinez",
       "cargo": "Administrativa Jefa"
     },
     {
-      "id": "3",
+      "id": 3,
       "nombre": "Juan",
       "cargo": "Analista"
     },
     {
-      "id": "4",
+      "id": 4,
       "nombre": "El Jonan",
       "cargo": "Drugdealer"
     },
     {
-      "id": "5",
+      "id": 5,
       "nombre": "Sergi",
       "cargo": "Programador en prácticas"
     },
     {
-      "id": "6",
+      "id": 6,
       "nombre": "Carles",
       "cargo": "Programador en prácticas"
     },
     {
-      "id": "7",
+      "id": 7,
       "nombre": "Messi",
       "cargo": "Ballon D'Or"
-    },
-    {
-      "id": "100",
-      "nombre": "aaa",
-      "cargo": "aaa"
-    },
-    {
-      "id": "10",
-      "nombre": "bbb",
-      "cargo": "bbb"
     }
   ]
 }

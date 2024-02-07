@@ -28,6 +28,7 @@ export class ShowClientComponent {
     let id: number = this.activeRoute.snapshot.params['id'];
     this.clientsService.getCliente(id).subscribe(data => {
       this.client = data;
+      console.log(data);
       // this.nombre = this.client.nombre;
       // this.cargo = this.client.cargo;
 
@@ -58,8 +59,6 @@ export class ShowClientComponent {
 
       this.clientsService.getClientes().subscribe(clients => {
         this.clients = clients;
-
-        this.navigateTo("/clients")
       })
     });
   }
