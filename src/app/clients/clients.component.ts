@@ -32,6 +32,7 @@ export class ClientsComponent {
 
   deleteClient(id: number) {
     this.clientsService.deleteCliente(id).subscribe(dato => {
+      this.ngOnInit();
       console.log(dato);
     });
   }
