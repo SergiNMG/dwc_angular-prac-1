@@ -15,6 +15,7 @@ import { FiltredArticleComponent } from './filtred-article/filtred-article.compo
 import { Guard1Guard } from './guards/guard1.guard';
 import { ClientsComponent } from './clients/clients.component';
 import { ShowClientComponent } from './show-client/show-client.component';
+import { AddClientComponent } from './add-client/add-client.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -29,7 +30,8 @@ const routes: Routes = [
   { path: 'showarticle/:codigo', component: ShowArticleComponent },
   { path: 'filter', component: FilterComponent },
   { path: 'clients', component: ClientsComponent },
-  { path: 'clients/:id', component: ShowClientComponent }
+  { path: 'clients/:id', component: ShowClientComponent },
+  { path: 'addclient', component: AddClientComponent }
 ];
 
 @NgModule({

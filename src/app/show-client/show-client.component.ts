@@ -8,27 +8,30 @@ import { Client } from '../models/client';
   templateUrl: './show-client.component.html',
   styleUrls: ['./show-client.component.css']
 })
-export class ShowClientComponent implements OnInit {
+export class ShowClientComponent {
 
-  id!: number;
-  nombre!: string;
-  cargo!: string;
+  // nombre!: string;
+  // cargo!: string;
 
   clients!: Client[];
-  client!: Client;
+  client: Client = {
+    id: 0,
+    nombre: "",
+    cargo: ""
+  };
 
   constructor(private clientsService: ClientsHttpService,
     private activeRoute: ActivatedRoute,
     private router: Router) { }
 
   ngOnInit() {
-    this.id = this.activeRoute.snapshot.params['id'];
-    this.clientsService.getCliente(this.id).subscribe(data => {
+    let id: number = this.activeRoute.snapshot.params['id'];
+    this.clientsService.getCliente(id).subscribe(data => {
       this.client = data;
+      // this.nombre = this.client.nombre;
+      // this.cargo = this.client.cargo;
 
-      this.nombre = this.client.nombre;
-      this.cargo = this.client.cargo;
-    })
+    });
   }
 
   // putCliente(client: Client) {
@@ -49,14 +52,9 @@ export class ShowClientComponent implements OnInit {
   // }
 
   putCliente() {
-    let updatedClient: Client = {
-      id: this.id,
-      nombre: this.nombre,
-      cargo: this.cargo
-    };
 
-    this.clientsService.putCliente(updatedClient).subscribe(() => {
-      console.log(updatedClient);
+    this.clientsService.putCliente(this.client).subscribe(data => {
+      console.log(data);
 
       this.clientsService.getClientes().subscribe(clients => {
         this.clients = clients;
@@ -67,8 +65,7 @@ export class ShowClientComponent implements OnInit {
   }
 
   cancel() {
-    this.nombre = this.client.nombre;
-    this.cargo = this.client.cargo;
+    this.navigateTo("/clients");
   }
 
   navigateTo(route: string) {

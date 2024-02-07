@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ClientsHttpService } from '../services/clients-http.service';
 import { Client } from '../models/client';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-clients',
@@ -9,6 +9,7 @@ import { Route, Router } from '@angular/router';
   styleUrls: ['./clients.component.css']
 })
 export class ClientsComponent {
+  id!: number;
   clients!: Client[];
   client!: Client;
 
@@ -25,6 +26,12 @@ export class ClientsComponent {
   showClient(id: number) {
     this.clientsService.getCliente(id).subscribe(dato => {
       this.client = dato;
+      console.log(dato);
+    });
+  }
+
+  deleteClient(id: number) {
+    this.clientsService.deleteCliente(id).subscribe(dato => {
       console.log(dato);
     });
   }

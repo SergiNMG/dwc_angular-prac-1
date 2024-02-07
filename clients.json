@@ -17,8 +17,8 @@
     },
     {
       "id": "4",
-      "nombre": "Jorge",
-      "cargo": "Mamporrero"
+      "nombre": "El Jonan",
+      "cargo": "Drugdealer"
     },
     {
       "id": "5",
@@ -33,7 +33,17 @@
     {
       "id": "7",
       "nombre": "Messi",
-      "cargo": "Futbolista"
+      "cargo": "Ballon D'Or"
+    },
+    {
+      "id": "100",
+      "nombre": "aaa",
+      "cargo": "aaa"
+    },
+    {
+      "id": "10",
+      "nombre": "bbb",
+      "cargo": "bbb"
     }
   ]
 }

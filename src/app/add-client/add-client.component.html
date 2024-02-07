@@ -1,0 +1,26 @@
+<div class="alert alert-primary mt-5 text-center" role="alert">
+    <h3 class="text-center">Articulo Seleccionado</h3>
+    <div class="d-inline-block">
+        <table class="mx-auto">
+            <tr>
+                <td>id: </td>
+                <td><input type="number" [(ngModel)]="newClient.id"></td>
+            </tr>
+            <tr>
+                <td>nombre: </td>
+                <td><input type="text" [(ngModel)]="newClient.nombre"></td>
+            </tr>
+            <tr>
+                <td>descripción: </td>
+                <td><input type="text" [(ngModel)]="newClient.cargo"></td>
+            </tr>
+        </table>
+
+        <div class="alert alert-danger" role="alert" *ngIf="error">
+            {{errorText}}
+        </div>
+
+        <br>
+        <button class="btn btn-primary" (click)="postClient()">Añadir</button> &nbsp;
+        <button class="btn btn-danger" (click)="cancel()">Cancelar</button>
+    </div>

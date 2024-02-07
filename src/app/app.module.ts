@@ -21,6 +21,7 @@ import { FiltredArticleComponent } from './filtred-article/filtred-article.compo
 import { HttpClientModule } from '@angular/common/http';
 import { ClientsComponent } from './clients/clients.component';
 import { ShowClientComponent } from './show-client/show-client.component';
+import { AddClientComponent } from './add-client/add-client.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ShowClientComponent } from './show-client/show-client.component';
     FilterComponent,
     FiltredArticleComponent,
     ClientsComponent,
-    ShowClientComponent
+    ShowClientComponent,
+    AddClientComponent
   ],
   imports: [
     BrowserModule,

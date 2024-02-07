@@ -1,6 +1,11 @@
 <h3>Listado de clientes</h3>
 
 <br>
+<div class="text-center">
+    <button class="btn btn-primary" (click)="navigateTo('/addclient')">Añadir</button>
+</div>
+
+<br>
 
 <table class="table">
     <thead>
@@ -16,6 +21,7 @@
             <td>{{client.nombre}}</td>
             <td>{{client.cargo}}</td>
             <td><button class="btn btn-primary" (click)="navigateTo('clients/' + client.id)">Ver</button></td>
+            <td><button class="btn btn-secondary" (click)="deleteClient(client.id)"> Eliminar </button></td>
         </tr>
     </tbody>
 </table>

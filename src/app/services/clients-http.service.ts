@@ -22,14 +22,14 @@ export class ClientsHttpService {
   }
 
   postCliente(client: Client): Observable<Client> {
-    return this.httpClient.post<Client>(this.url + "/" + client.id, client);
+    return this.httpClient.post<Client>(this.url, client);
   }
 
   putCliente(client: Client): Observable<Client> {
     return this.httpClient.put<Client>(this.url + "/" + client.id, client)
   }
 
-  deleteCliente(id: string): Observable<Client[]> {
+  deleteCliente(id: number): Observable<Client[]> {
     return this.httpClient.delete<Client[]>(this.url + "/" + id);
   }
 }
